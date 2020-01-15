@@ -1,0 +1,19 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  --theme-primary-color: #558055;
+  --theme-seconday-color: #80A0FF;
+  --background-color: #303030;
+  --color: #fafafa;
+
+  background-color: var(--background-color);
+}

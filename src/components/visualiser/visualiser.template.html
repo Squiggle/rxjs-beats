@@ -1,0 +1,50 @@
+<style>
+  :host {
+    width: 100%;
+    display: flex;
+    flex-flow: column no-repeat;
+
+    min-height: 4em;
+  }
+  :host .container {
+    flex: 1 0 auto;
+    
+    display: flex;
+    flex-flow: column no-repeat;
+  }
+  :host .phrases {
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-flow: row no-repeat;
+  }
+  :host .phrases .phrase-beat {
+    flex: 1 0 auto;
+    border-left: 2px solid grey;
+    padding-left: 0.5em;
+  }
+
+  :host span.active {
+    border: 3px solid black;
+  }
+  :host .scan {
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+
+    position: relative;
+
+    /*
+      animation example:
+      animation: 6000ms linear 1s infinite scan;
+    */
+  }
+  @keyframes scan { from { left: 0; } to { left: 100%; }  }
+</style>
+<div class="scan"></div>
+<div class="container">
+  <div class="phrases">
+    <!-- this is populated horizontally with elements for each track -->
+  </div>
+  <div class="tracks"></div>
+</div>

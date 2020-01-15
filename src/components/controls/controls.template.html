@@ -1,0 +1,44 @@
+<style>
+:host {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr min-content;
+}
+:host > .beats__chrome--main {
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+:host .beats__chrome--controls {
+
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 0.5rem;
+
+  background-color: var(--background-color);
+  color: var(--color);
+}
+:host .beats__chrome--controls label {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+</style>
+<div class="beats__chrome--main">
+  <slot></slot>
+</div>
+<div class="beats__chrome--controls">
+  <label>Tempo
+    <input name="tempo" type="number" min="30" max="300" required />
+  </label>
+  <label>Play/stop
+    <input name="play" type="checkbox" />
+  </label>
+  <label>Time signature</label>
+</div>
