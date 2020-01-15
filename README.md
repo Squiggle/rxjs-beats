@@ -8,7 +8,7 @@ This workshop is intended to introduce you to the basics of Reactive Extensions 
 
 ```
 npm install
-npm start
+npm run serve
 ```
 
 # Ideas
